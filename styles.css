@@ -1,0 +1,189 @@
+:root {
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    background-color: var(--Eggshell);
+    color: var(--Wenge-Brown);
+    
+}
+
+h1,
+h2 {
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+}
+
+h1 {
+    color: var(--Dark-Charcoal);
+    margin-bottom: 15px;
+    font-size: 42px;
+}
+
+h2 {
+    color: var(--Nutmeg);
+    font-size: 28px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.container {
+    background-color: var(--White);
+    width: 700px;
+    padding: 30px;
+    margin: 100px auto;
+    border-radius: 20px;
+}
+
+.img_recipe {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.prep_time {
+    background-color: var(--Rose-White);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px 0;
+    color: var(--Dark-Raspberry);
+}
+
+.prep_details {
+    color: var(--Wenge-Brown);
+}
+
+.prep_details li:before {
+    color: var(--Dark-Raspberry);
+}
+
+.ingredients_details li:before {
+    color: var(--Nutmeg);
+}
+
+.list li {
+    list-style-type: none;
+    margin: 20px 0;
+    margin-left: 40px;
+    position: relative;
+}
+
+.list li:before {
+    position: absolute;
+    left: -33px;
+    width: 1em;
+    content: '\2022';
+    font-weight: 700;
+}
+
+.ingredients,
+.instructions {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ol_list {
+    list-style-type: none;
+    counter-reset: item;
+}
+
+.ol_list li {
+    counter-increment: item;
+    margin: 20px 0;
+    margin-left: 40px;
+    position: relative;
+}
+
+.ol_list li:before {
+    font-weight: 700;
+    width: 1em;
+    position: absolute;
+    left: -33px;
+    content: counter(item)".";
+    color: var(--Nutmeg);
+}
+
+.nutritions {
+    margin: 20px 0;
+}
+
+.nutritions_title {
+    margin-bottom: 14px;
+}
+
+.nutrients {
+    margin: 15px 0;
+    padding: 15px 0;
+}
+
+.nutrients span {
+    display: inline-block;
+}
+
+.type_nutrients {
+    text-align: left;
+    margin-left: 2em;
+    width: 47%;
+}
+
+.scales {
+    color: var(--Nutmeg);
+}
+
+.underline {
+    border-bottom: 1px solid var(--Light-Grey);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 700px) {
+
+    body {
+        background-color: var(--White);
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .img_recipe {
+        border-radius: 0px;
+    }
+    
+    .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .recipe_details {
+        padding: 20px;
+    }
+}
