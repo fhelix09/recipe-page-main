@@ -67,6 +67,12 @@ h2 {
     color: var(--Dark-Raspberry);
 }
 
+.prep_time_text {
+    font-size: 19px;
+    font-family: 'Outfit', sans-serif;
+    color: var(--Dark-Raspberry);
+}
+
 .prep_details {
     color: var(--Wenge-Brown);
 }
